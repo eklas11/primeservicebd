@@ -58,7 +58,63 @@
   "sameAs": []
 }
 </script>
+/* ============================================================
+   LOGO FIX — Play button hide, logo perfect fit
+   ============================================================ */
 
+.splash-logo,
+.brand-logo,
+.auth-illustration {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  overflow: visible !important;
+  position: relative;
+}
+
+.splash-logo {
+  width: 110px !important;
+  height: 110px !important;
+  border-radius: 0 !important;
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+.brand-logo {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 0 !important;
+}
+
+.auth-illustration {
+  width: 110px !important;
+  height: 110px !important;
+  border-radius: 0 !important;
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+.splash-logo img,
+.brand-logo img,
+.auth-illustration img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  display: block !important;
+}
+
+.splash-logo svg,
+.brand-logo svg,
+.auth-illustration svg {
+  width: 100% !important;
+  height: 100% !important;
+  color: var(--primary) !important;
+  opacity: 0.7;
+}
 <style>
 /* ============================================================
    RESET & BASE
@@ -1023,11 +1079,7 @@ textarea::placeholder{color:var(--muted-2)}
 <body>
 
 <!-- ============ SPLASH ============ -->
-<div class="splash" id="splash">
-  <div class="splash-logo" id="splashLogo">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/>
-    </svg>
+<div class="splash-logo" id="splashLogo"></div>
   </div>
   <h1 id="splashName">Prime Service</h1>
   <div class="load-bar"></div>
@@ -1050,9 +1102,7 @@ textarea::placeholder{color:var(--muted-2)}
   <!-- TOP BAR -->
   <div class="topbar">
     <div class="brand">
-      <div class="brand-logo" id="brandLogo">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/></svg>
-      </div>
+<div class="brand-logo" id="brandLogo"></div>
       <div class="brand-text" id="brandName">Prime Service</div>
     </div>
     <div class="user-chip" id="userChip" style="display:none">
@@ -1067,9 +1117,7 @@ textarea::placeholder{color:var(--muted-2)}
     <!-- AUTH -->
     <div class="screen auth-screen active" id="screen-auth">
       <div class="auth-hero">
-        <div class="auth-illustration" id="authLogo">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor" stroke="none"/></svg>
-        </div>
+        <div class="auth-illustration" id="authLogo"></div>
         <h1>স্বাগতম <span id="authTitleName">Prime Service</span>-এ</h1>
         <p id="authTagline">আপনার প্রয়োজনীয় সব ডিজিটাল সার্ভিস এক জায়গায়</p>
       </div>
